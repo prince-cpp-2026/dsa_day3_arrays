@@ -3,38 +3,26 @@
 using namespace std;
 int main(){
 
-    int n, x;
-
-    cout<<"Enter size of array:";
-    cin>> n;
+int n;
+    cout<<"Enter size of array: ";
+    cin>>n;
 
     int arr[n];
-
-    cout<<"Enter" <<n<<"elements:";
+    cout<<"Enter " <<n<< " elements: ";
     for(int i=0;i<n;i++)
-    {
-        cin>> arr[i];
-    }
-
-    cout<<"Enter element to search:";
-    cin>> x;
-
-    bool found = false;
-    
-   for(int i = 0;i < n; i++)
-    {
-        if(arr[i]==x)
         {
-            cout<<"Element"<<x<<"found at index"<<i<<endl;
-           found = true;
-           
+            cin>>arr[i];
         }
-    }
 
-    if(!found)
-    {
-        cout<<x<<"not found in array"<<endl;
-    }
+    int max = arr[0];
+    for(int i=1;i<n;i++)
+        {
+            if(arr[i] > max)
+        {
+                max = arr[i];
+                }
+}
 
+cout<<"Maximum element = "<<max<<endl;
     return 0;
 }
